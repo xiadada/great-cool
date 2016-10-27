@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+	list-style: none;
 }
 .wrapper {
 	position: relative;
@@ -9,6 +10,23 @@
 	margin:  0 auto;
 	border: 1px solid black;
 	overflow: hidden;
+}
+.wrapper .point{
+	position: absolute;
+	bottom: 10px;
+	left:327px;
+	content:" ";
+	display: block;
+	clear:both;
+	z-index: 1000;
+}
+.wrapper .point li{
+	width:10px;
+	height:10px;
+	float:left;
+        background-color: #ffffcc;
+	margin-left:10px;
+	border-radius: 50%;
 }
 .wrapper .btn {
 	position: absolute;
