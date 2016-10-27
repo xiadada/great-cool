@@ -69,11 +69,11 @@ $('.btnLeft').on('click',function () {
 init();
 
 
-timer = setInterval(leftMove,1000);
+timer = setInterval(leftMove,2000);
 
 $('.wrapper').on('mousemove',function () {
 	clearInterval(timer);
 })
 $('.wrapper').on('mouseout',function () {
-	timer = setInterval(leftMove,1000);
+	timer = setInterval(leftMove,2000);
 })
