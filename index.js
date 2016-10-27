@@ -1,5 +1,5 @@
 var oLi = $('.wrapper .move');
-
+var littlepoint=$('.wrapper .point li');
 var index = 0;
 
 var timer = null;
@@ -10,7 +10,7 @@ function init () {
 	oLi.eq(0).css({'top':'50%','margin-top':'-90px','height':'180px','width':'250px','left':'0px','opacity':'0.4','z-index':'1'});
 	oLi.eq(1).css({'top':'0','margin-top':'0px','height':"300px",'width':'400px','left':'200px','opacity':'1','z-index':'100'});
 	oLi.eq(2).css({'top':'50%','margin-top':'-90px','height':'180px','width':'250px','left':'550px','opacity':'0.4','z-index':'1'});
-		
+	littlepoint.eq(0).css({"background-color":'orange'});	
 }
 
 function leftMove () {
@@ -27,6 +27,12 @@ function leftMove () {
 		
 		oLi.eq( (index + 3) % 6 ).css({'left':'800px'});
 		oLi.eq( (index + 3) % 6).animate({'left':'550px','width':'250px','height':'180px','top':'50%','margin-top':'-90px','opacity':'0.4'},function () {
+			littlepoint.eq((index+1)%6).css({"background-color":'orange'});
+			littlepoint.eq((index+2)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index+3)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index+4)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index-1)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index)%6).css({"background-color":'#ffffcc'});
 			index++;
 			flag = true;
 		});		
@@ -53,6 +59,12 @@ function rightMove () {
 		oLi.eq((index + 1) % 6).animate({'left':'550px','width':"250px",'height':'180px','top':'50%','margin-top':'-90px','opacity':'0.4'});
 		
 		oLi.eq((index + 2) % 6).animate({'left':'800px','width':'250px','height':'0px','top':'50%','margin-top':'0','opacity':'0.4'},function () {
+			littlepoint.eq((index+1)%6).css({"background-color":'orange'});
+			littlepoint.eq((index+2)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index+3)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index+4)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index-1)%6).css({"background-color":'#ffffcc'});
+			littlepoint.eq((index)%6).css({"background-color":'#ffffcc'});
 			index--;
 			flag = true;
 		});
