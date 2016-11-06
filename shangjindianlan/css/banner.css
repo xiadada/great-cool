@@ -1,0 +1,59 @@
+
+/*给最外层盒子加样式*/
+#banner{
+    width:100%;
+    margin:0px auto;/*让盒子居中显示*/
+    overflow:hidden;/*超出隐藏*/
+    position:relative;/*兼容IE7，必须要给相对定位的盒子加相对定位才能超出隐藏*/
+}
+/*给可以滑动的长条加样式*/
+.banner_list{
+    /*滑动长条的宽可以让所有图片水平排列 宽=每个图片的宽度*图片的个数 */
+    /*width:2800px;*/ /*注意：我们要做的是自适应的，也就是无论放多少图片都应该水平排列,这里不能写死*/
+    position:relative;/*给长条加上定位，上长条激活left*/
+    left:0;/*想让第二张图片在盒子中显示，left负的第一张的宽度*/
+    overflow: hidden;
+}
+/*给每张图片盒子加样式*/
+.banner_list li{
+    float:left;
+}
+.banner_list li img{
+    width:100%;
+}
+
+/*按钮组*/
+.btn_group{
+    text-align:center;/*让按钮据中*/
+}
+
+/*小点点*/
+.point_group{
+    width:100%;
+    height:10px;
+    padding:20px 0;
+    position: absolute;
+    bottom:0;
+}
+.point_box{
+    height:10px;
+    float:left;
+    position:relative;
+    left:50%;
+}
+.point_group ul{
+    height:10px;
+    position:relative;
+    left:-50%;
+}
+.point_group li{
+    width:52px;
+    height:10px;
+    background-color:#9e9e9e;
+    float:left;
+    margin:0 2px;
+    cursor:pointer;
+}
+.point_group .active{
+    background-color:#8be909;
+}
